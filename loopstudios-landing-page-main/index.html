@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Loopstudios landing page</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- header  -->
+  <header>
+    <div class="header-content">
+      <nav class="navbar">
+
+        <!-- Brand Logo  -->
+        <div class="logo">
+          <img src="./images/logo.svg" alt="Brand Logo">
+        </div>
+
+        <!-- Nav links  -->
+        <ul class="navlinks">
+          <a href="#">
+            <li class="nav-items">About</li>
+          </a>
+          <a href="#">
+            <li class="nav-items">Careers</li>
+          </a>
+          <a href="#">
+            <li class="nav-items">Events</li>
+          </a>
+          <a href="#">
+            <li class="nav-items">Products</li>
+          </a>
+          <a href="#">
+            <li class="nav-items">Support</li>
+          </a>
+        </ul>
+
+        <div class="open-btn">
+          <img src="./images/icon-hamburger.svg" id="open" alt="hamburger button">
+        </div>
+      </nav>
+
+      <div class="menu-bar">
+        <!-- close button  -->
+        <div>
+          <img src="./images/logo.svg" id="menu-logo" alt="Brand Logo">
+          <img src="./images/icon-close.svg" id="close" alt="hamburger button">
+        </div>
+
+        <!-- Menu-bar nav links  -->
+        <ul class="menu-navlinks">
+          <a href="#">
+            <li>About</li>
+          </a>
+          <a href="#">
+            <li>Careers</li>
+          </a>
+          <a href="#">
+            <li>Events</li>
+          </a>
+          <a href="#">
+            <li>Products</li>
+          </a>
+          <a href="#">
+            <li>Support</li>
+          </a>
+        </ul>
+      </div>
+
+      <article class="intro">
+        Immersive
+        experiences
+        that deliver
+      </article>
+    </div>
+  </header>
+
+  <!-- Main section  -->
+  <main>
+    <!-- section 1 -->
+    <section class="section-1">
+      <!-- Intro image div  -->
+      <div class="vr-img">
+      </div>
+      <!-- Intro information -->
+      <div class="vr-info">
+        <p class="heading">The leader in interactive VR</p>
+        <p class="info">Founded in 2011, Loopstudios has been producing world-class virtual reality
+          projects for some of the best companies around the globe. Our award-winning
+          creations have transformed businesses through digital experiences that bind
+          to their brand.</p>
+      </div>
+    </section>
+
+    <!-- section 2 -->
+    <section class="section-2">
+      <div class="creation-header">
+        <!-- title  -->
+        <p class="creation-title">Our creations</p>
+        <!-- see all button -->
+        <button class="see-all">See all</button>
+      </div>
+
+      <!-- Creation images  -->
+      <div class="creation-images">
+        <div class="image image-1">
+          <p>Deep earth</p>
+        </div>
+        <div class="image image-2">
+          <p>
+            Night arcade</p>
+        </div>
+        <div class="image image-3">
+          <p>
+            Soccer team VR
+          </p>
+        </div>
+        <div class="image image-4">
+          <p>
+            The grid
+          </p>
+        </div>
+        <div class="image image-5">
+          <p>
+            From up above VR
+          </p>
+        </div>
+        <div class="image image-6">
+          <p>
+            Pocket borealis
+          </p>
+        </div>
+        <div class="image image-7">
+          <p>
+            The curiosity
+          </p>
+        </div>
+        <div class="image image-8">
+          <p>
+            Make it fisheye</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <!-- content-1  -->
+      <div class="content-1">
+        <!-- footer logo  -->
+        <div class="f-logo">
+          <img src="./images/logo.svg" class="footer-logo" alt="footer-logo">
+        </div>
+        <!-- Icons  -->
+        <div class="icons">
+          <a href="#">
+            <img src="./images/icon-facebook.svg" alt="facebook icon">
+          </a>
+          <a href="#">
+            <img src="./images/icon-twitter.svg" alt="facebook icon">
+          </a>
+          <a href="#">
+            <img src="./images/icon-pinterest.svg" alt="facebook icon">
+          </a>
+          <a href="#">
+            <img src="./images/icon-instagram.svg" alt="facebook icon">
+          </a>
+        </div>
+      </div>
+
+      <!-- content-2  -->
+      <div class="content-2">
+        <!-- footer links  -->
+        <ul class="footer-navlinks">
+          <a href="#">
+            <li>About</li>
+          </a>
+          <a href="#">
+            <li>Careers</li>
+          </a>
+          <a href="#">
+            <li>Events</li>
+          </a>
+          <a href="#">
+            <li>Products</li>
+          </a>
+          <a href="#">
+            <li>Support</li>
+          </a>
+        </ul>
+
+        <!-- Copy rights  -->
+        <p>© 2022 Loopstudios. All rights reserved.</p>
+        </div.content-2>
+      </div>
+  </footer>
+</body>
+<script>
+  let hamburger_btn = document.querySelector('.open-btn')
+  let close_btn = document.getElementById('close')
+  let menu_bar = document.querySelector('.menu-bar')
+
+  hamburger_btn.addEventListener('click', () => {
+    menu_bar.classList.add('open')
+  })
+
+  close_btn.addEventListener('click', () => {
+    menu_bar.classList.remove('open')
+  })
+</script>
+
+</html>
