@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Mentor | Social Media Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="index.js"></script>
+</head>
+
+<body>
+  <!-- Main body  -->
+  <main>
+    <!-- Header section  -->
+    <header>
+      <!-- Title and follower count  -->
+      <div class="heading">
+        <h1>Social Media Dashboard</h1>
+        <p>Total Followers: 23,004</p>
+      </div>
+
+      <!-- Toggle switch for dark mode  -->
+      <div class="toggle_bar">
+        <p>Dark Mode</p>
+        <div class="toggle_switch">
+          <div class="box">
+            <div class="ball"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="total_followers">
+
+      <!-- Facebook card  -->
+      <div class="card facebook_card">
+        <span class="social_media-username">
+          <img src="./images/icon-facebook.svg" alt="facebook-icon">
+          <span class="username">@nathanf</span>
+        </span>
+
+        <span class="followers_count">
+          <h2>1987</h2>
+          <p>Followers</p>
+        </span>
+
+        <span class="todays_total-count">
+          <img src="./images/icon-up.svg" alt="up arrow">
+          <span class="today_count up">12 Today</span>
+        </span>
+      </div>
+
+      <!-- Twitter card  -->
+      <div class="card twitter_card">
+        <span class="social_media-username">
+          <img src="./images/icon-twitter.svg" alt="twitter-icon">
+          <span class="username">@nathanf</span>
+        </span>
+
+        <span class="followers_count">
+          <h2>1044</h2>
+          <p>Followers</p>
+        </span>
+
+        <span class="todays_total-count">
+          <img src="./images/icon-up.svg" alt="up arrow">
+          <span class="today_count up">99 Today</span>
+        </span>
+      </div>
+
+      <!-- Instagram card  -->
+      <div class="card instagram_card">
+        <span class="social_media-username">
+          <img src="./images/icon-instagram.svg" alt="instagram-icon">
+          <span class="username">@realnathanf</span>
+        </span>
+
+        <span class="followers_count">
+          <h2>11K</h2>
+          <p>Followers</p>
+        </span>
+
+        <span class="todays_total-count">
+          <img src="./images/icon-up.svg" alt="up arrow">
+          <span class="today_count up">1099 Today</span>
+        </span>
+      </div>
+
+      <!-- Youtube card  -->
+      <div class="card youtube_card">
+        <span class="social_media-username">
+          <img src="./images/icon-youtube.svg" alt="youtube-icon">
+          <span class="username">Nathan F.</span>
+        </span>
+
+        <span class="followers_count">
+          <h2>8239</h2>
+          <p>Subscribers</p>
+        </span>
+
+        <span class="todays_total-count">
+          <img src="./images/icon-down.svg" alt="up arrow">
+          <span class="today_count down">144 Today</span>
+        </span>
+      </div>
+    </section>
+
+
+    <section class="overview_section">
+      <h2>Overview - Today</h2>
+
+      <div class="all-cards">
+        <!-- card - 1 -->
+        <div class="overview_card">
+          <div class="top">
+            <p>Page Views</p>
+            <img src="./images/icon-facebook.svg" alt="facebook-icon">
+          </div>
+          <div class="bottom">
+            <h3>87</h3>
+            <span class="percentage_count">
+              <img src="./images/icon-up.svg" alt="up arrow">
+              <span class="today_count up">3%</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- card - 2 -->
+        <div class="overview_card">
+          <div class="top">
+            <p>Likes</p>
+            <img src="./images/icon-facebook.svg" alt="facebook-icon">
+          </div>
+          <div class="bottom">
+            <h3>52</h3>
+            <span class="percentage_count">
+              <img src="./images/icon-down.svg" alt="down arrow">
+              <span class="today_count down">2%</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- card - 3 -->
+        <div class="overview_card">
+          <div class="top">
+            <p>Likes</p>
+            <img src="./images/icon-instagram.svg" alt="instagram-icon">
+          </div>
+          <div class="bottom">
+            <h3>5462</h3>
+            <span class="percentage_count">
+              <img src="./images/icon-up.svg" alt="up arrow">
+              <span class="today_count up">2257%</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- card - 4 -->
+        <div class="overview_card">
+          <div class="top">
+            <p>Profile Views</p>
+            <img src="./images/icon-instagram.svg" alt="instagram-icon">
+          </div>
+          <div class="bottom">
+            <h3>52K</h3>
+            <span class="percentage_count">
+              <img src="./images/icon-up.svg" alt="up arrow">
+              <span class="today_count up">1375%</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- card - 5 -->
+        <div class="overview_card">
+          <div class="top">
+            <p>Retweets</p>
+            <img src="./images/icon-twitter.svg" alt="twitter-icon">
+          </div>
+          <div class="bottom">
+            <h3>117</h3>
+            <span class="percentage_count">
+              <img src="./images/icon-up.svg" alt="up arrow">
+              <span class="today_count up">303%</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- card - 6 -->
+        <div class="overview_card">
+          <div class="top">
+            <p>Likes</p>
+            <img src="./images/icon-twitter.svg" alt="twitter-icon">
+          </div>
+          <div class="bottom">
+            <h3>507</h3>
+            <span class="percentage_count">
+              <img src="./images/icon-up.svg" alt="up arrow">
+              <span class="today_count up">553%</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- card - 7 -->
+        <div class="overview_card">
+          <div class="top">
+            <p>Likes</p>
+            <img src="./images/icon-youtube.svg" alt="youtube-icon">
+          </div>
+          <div class="bottom">
+            <h3>107</h3>
+            <span class="percentage_count">
+              <img src="./images/icon-down.svg" alt="up arrow">
+              <span class="today_count down">19%</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- card - 8 -->
+        <div class="overview_card">
+          <div class="top">
+            <p>Total Views</p>
+            <img src="./images/icon-youtube.svg" alt="youtube-icon">
+          </div>
+          <div class="bottom">
+            <h3>1407</h3>
+            <span class="percentage_count">
+              <img src="./images/icon-down.svg" alt="down arrow">
+              <span class="today_count down">12%</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+  </main>
+</body>
+
+</html>
