@@ -17,34 +17,27 @@
     --instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
     --youtube: hsl(348, 97%, 39%);
 
-    /* Dark Theme for switch */
-    --dark_toggle: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    --toggle_bg: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
 
-    /* Light Theme for switch */
-    --light_toggle: hsl(230, 22%, 74%);
-
-    /* Dark Theme for body  */
-    --very_dark_blue_1: hsl(230, 17%, 14%);
-    --very_dark_blue_2: hsl(232, 19%, 15%);
-    --dark_desaturated_blue: hsl(228, 28%, 20%);
-    --desaturated_blue: hsl(228, 34%, 66%);
-    --white: hsl(0, 0%, 100%);
-
-
-    /* Light Theme  */
-    --very_pale_blue: hsl(225, 100%, 98%);
-    --light_grayish_blue: hsl(227, 47%, 96%);
-    --dark_grayish_blue: hsl(228, 12%, 44%);
-    --very_dark_blue_3: hsl(230, 17%, 14%);
+    /* dark mode colors  */
+        --bg: hsl(232, 19%, 15%);
+        --main_bg: hsl(230, 17%, 14%);
+        --card_bg: hsl(228, 28%, 20%);
+        --hover_bg: hsl(228, 30%, 26%);
+        --heading_text: hsl(0, 0%, 100%);
+        --text: hsl(228, 34%, 66%);
+    }
+/* -- light mode colors  */
+.light {
+    --bg: hsl(225, 100%, 98%);
+    --main_bg: hsl(0, 0%, 100%);
+    --card_bg: hsl(227, 47%, 96%);
+    --hover_bg: hsl(230, 19%, 88%);
+    --heading_text: hsl(230, 17%, 14%);
+    --text: hsl(228, 12%, 44%);
 }
 
-.bg-color {
-    background-color: var(--white);
-}
 
-.card-bg {
-    background-color: var(--light_grayish_blue);
-}
 
 main {
     width: 80%;
@@ -53,12 +46,12 @@ main {
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: var(--very_dark_blue_1);
+    background-color: var(--main_bg);
 }
 
 /* -- header --  */
 header {
-    color: var(--white);
+    color: var(--heading_text);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -71,7 +64,7 @@ header {
 }
 
 .heading p {
-    color: var(--desaturated_blue);
+    color: var(--text);
 
 }
 
@@ -86,14 +79,14 @@ header {
 .box {
     width: 55px;
     height: 25px;
-    background-image: var(--dark_toggle);
+    background-image: var(--toggle_bg);
     border-radius: 20px;
     padding: 2px;
     cursor: pointer;
 }
 
 .ball {
-    background-color: var(--very_dark_blue_2);
+    background-color: var(--bg);
     width: 22px;
     height: 22px;
     border-radius: 50%;
@@ -108,8 +101,6 @@ header {
 /* -- Total Followers section --  */
 
 .total_followers {
-    /* display: grid;
-    grid-template-columns: repeat(4, 1fr); */
 
     display: flex;
     flex-direction: row;
@@ -124,7 +115,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--dark_desaturated_blue);
+    background-color: var(--card_bg);
     border-radius: 5px;
     border-top-width: 4px;
     border-top-style: solid;
@@ -132,6 +123,9 @@ header {
 
 }
 
+.card:hover {
+    background-color: var(--hover_bg);
+}
 .facebook_card {
     border-top-color: var(--facebook);
 }
@@ -162,7 +156,7 @@ header {
 
 .username {
     font-size: 14px;
-    color: var(--desaturated_blue);
+    color: var(--text);
 }
 
 .followers_count {
@@ -172,12 +166,12 @@ header {
 .followers_count h2 {
     font-size: 3rem;
     font-weight: 700;
-    color: var(--white);
+    color: var(--heading_text);
 }
 
 .followers_count p {
     text-transform: uppercase;
-    color: var(--desaturated_blue);
+    color: var(--text);
     letter-spacing: 5px;
     font-size: 12px;
 }
@@ -209,7 +203,7 @@ header {
 }
 
 .overview_section h2 {
-    color: var(--white);
+    color: var(--heading_text);
 }
 
 .all-cards {
@@ -226,10 +220,13 @@ header {
     height: 130px;
     padding: 30px;
     border-radius: 5px;
-    background-color: var(--dark_desaturated_blue);
+    background-color: var(--card_bg);
     cursor: pointer;
 }
 
+.overview_card:hover {
+    background-color: var(--hover_bg);
+}
 .top,
 .bottom {
     display: flex;
@@ -245,13 +242,13 @@ header {
 .top p {
     font-weight: bold;
     font-size: 14px;
-    color: var(--desaturated_blue);
+    color: var(--text);
 }
 
 .bottom h3 {
     font-size: 2rem;
     font-weight: 700;
-    color: var(--white);
+    color: var(--heading_text);
 }
 
 .percentage_count {
@@ -275,7 +272,7 @@ header {
     .heading {
         width: 100%;
         padding-bottom: 20px;
-        border-bottom: 0.5px solid var(--desaturated_blue);
+        border-bottom: 0.5px solid;
         text-align: left;
     }
 
