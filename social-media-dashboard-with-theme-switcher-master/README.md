@@ -17,7 +17,7 @@ This is a solution to the [Social media dashboard with theme switcher challenge 
 ### Links
 
 - Live Site URL: (<https://social-media-dashboard-fm.netlify.app/>)
-- Solution URL: (<https://github.com/suraj-py/Frontend-Mentor-Challenges/tree/master/loopstudios-landing-page-main>)
+- Solution URL: (<https://github.com/suraj-py/Frontend-Mentor-Challenges/tree/master/social-media-dashboard-with-theme-switcher-master>)
 
 ### Screenshot
 
@@ -25,8 +25,10 @@ This is a solution to the [Social media dashboard with theme switcher challenge 
 ![Desktop dark mode view](./screenshots/desktop-dark-mode.png)
 - Desktop light mode
 ![Desktop light mode view](./screenshots/desktop-light-mode.png)
+
 - Mobile dark mode
 ![Mobile dark mode view](./screenshots/mobie-dark-mode.png)
+
 - Mobile light mode
 ![Mobile light mode view](./screenshots/mobile-light-mode.png)
 
