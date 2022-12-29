@@ -19,7 +19,10 @@ This is a solution to the [Loopstudios landing page challenge on Frontend Mentor
 
 ### Screenshot
 
+- Desktop view
 ![Desktop view](./screenshots/desktop-view.png)
+
+- Mobile view
 ![Mobile view](./screenshots/mobile-view.png)
 
 ## My process
