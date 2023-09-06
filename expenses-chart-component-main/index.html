@@ -1,43 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Expenses chart component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expenses Chart Component</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
 </head>
 <body>
+    <main class="" >
+    <!-- upper section -->
+        <section class="header flex">
+            <div class="my_balance">
+                <p>My balance</p>
+                <h4>$921.48</h4>
+            </div>
+            <img src="./images/logo.svg" class="logo" alt="logo">
+        </section>
 
-  My balance
-  $921.48
+    <!-- main section -->
+    <section class="main_content">
 
-  Spending - Last 7 days
+        <h2 class="title">
+            Spending - Last 7 days
+        </h2>
 
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
+        <div class="bargraph_section">
+            <span class="bar">mon</span>
+            <span class="bar">tue</span>
+            <span class="bar">wed</span>
+            <span class="bar">thu</span>
+            <span class="bar">fri</span>
+            <span class="bar">sat</span>
+            <span class="bar">sun</span>
+        </div>
 
-  Total this month
-  $478.33
+        <hr>
 
-  +2.4%
-  from last month
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+        <div class="total_spending flex">
+            <div class="total_amount">
+                <p>Total this month</p>
+                <h4>$478.33</h4>
+            </div>
+            <div class="percent_box">
+                <h4>+2.4%</h4>
+                <p>from last month</p>
+            </div>
+        </div>
+    </section>
+    </main>
+    
 </body>
 </html>

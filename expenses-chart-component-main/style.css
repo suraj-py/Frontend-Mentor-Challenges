@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* Primary colors  */
+    --soft_red: hsl(10, 79%, 65%);
+    --cyan: hsl(186, 34%, 60%);
+
+    /* Netural colors  */
+    --dark_brown: hsl(25, 47%, 15%);
+    --medium_brown: hsl(28, 10%, 53%);
+    --cream: hsl(27, 66%, 92%);
+    --very_pale_orange: hsl(33, 100%, 98%);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+.b{
+    border: 1px solid black;
+}
+body{
+    background-color: var(--cream);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    font-family: 'DM Sans', sans-serif;
+}
+
+main{
+    width: 375px;
+}
+
+.flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header{
+    max-width: 350px;
+    height: 70px;
+    padding: 0 20px;
+    background-color: var(--soft_red);
+    border-radius: 10px;
+}
+
+.my_balance{
+    color: var(--very_pale_orange);
+}
+.my_balance p{
+    font-size: 12px;
+    font-weight: 400;
+}
+.my_balance h4 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.logo{
+    width: 50px;
+    height: 50px;
+}
+
+
+.main_content{
+    max-width: 350px;
+    height: 320px;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: var(--very_pale_orange);
+}
+
+.title{
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--dark_brown);
+}
+
+.bargraph_section{
+    height: 200px;
+}
+
+.total_spending flex{
+    align-items: flex-end;
+}
+
+.total_amount h4{
+    color: var(--dark_brown);
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.total_amount p {
+    color: var(--medium_brown);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.percent_box h4 {
+    color: var(--dark_brown);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.percent_box p {
+    color: var(--medium_brown);
+    font-size: 12px;
+    font-weight: 400;
+}
