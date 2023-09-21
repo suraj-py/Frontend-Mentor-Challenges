@@ -11,7 +11,7 @@
     /* Primary  */
     --soft_cyan: hsl(174, 77%, 80%); /*(Full Slider Bar)*/
     --strong_cyan : hsl(174, 86%, 45%); /*(Slider Backround)*/
-    --light_grayish_red : hsl(14, 92%, 95%) /*(Discount Background):*/
+    --light_grayish_red : hsl(14, 92%, 95%); /*(Discount Background):*/
     --light_red : hsl(15, 100%, 70%); /*(Discount Text)*/
     --pale_blue : hsl(226, 100%, 87%); /*(CTA Text)*/
 
@@ -27,3 +27,38 @@
 
 /* font-family: 'DM Sans', sans-serif; */
 /* font-family: 'Manrope', sans-serif; */
+
+html{
+    scroll-behavior: smooth;
+    font-family: 'Manrope', sans-serif;
+}
+body{
+    background-image: url('./images/bg-pattern.svg');
+    background-repeat: no-repeat;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.heading{
+    max-width: 500px;
+    padding: 100px 0;
+    text-align: center;
+    border: 1px dotted palevioletred;
+
+    background-image: url('./images/pattern-circles.svg');
+    background-repeat: no-repeat;
+    background-position: center; /*centes the bg image in div*/ 
+}
+
+.heading h1{
+    color: var(--dark_desaturated_blue);
+}
+
+.heading p {
+    color: var(--grayish_blue);
+}
