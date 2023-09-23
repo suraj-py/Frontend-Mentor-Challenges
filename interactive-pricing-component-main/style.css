@@ -16,7 +16,7 @@
     --pale_blue : hsl(226, 100%, 87%); /*(CTA Text)*/
 
     /* Neutral  */
-    --white : hsl (0, 0%, 100%); /*(Pricing Component Background)*/ 
+    --white : hsl(0, 0%, 100%); /*(Pricing Component Background)*/ 
     --very_pale_blue : hsl(230, 100%, 99%); /*(Main Background)*/ 
     --light_grayish_blue : hsl(224, 65%, 95%); /*(Empty Slider Bar)*/ 
     --light_grayish_blue : hsl(223, 50%, 87%); /*(Toggle Background)*/ 
@@ -44,12 +44,11 @@ body{
     align-items: center;
 }
 
-
+/* Header section */
 .heading{
     max-width: 500px;
     padding: 100px 0;
     text-align: center;
-    border: 1px dotted palevioletred;
 
     background-image: url('./images/pattern-circles.svg');
     background-repeat: no-repeat;
@@ -64,18 +63,16 @@ body{
     color: var(--grayish_blue);
 }
 
-
-
-/* --------------------------------------------------------------- */
-
+/* Main pricing component  */
 .pricing__component{
     width: 500px;
     height: 300px;
     padding: 40px;
     background-color: var(--white);
-    border: 1px dotted palevioletred;
+    box-shadow: 0 0 30px #e5ebe8;
 }
 
+/* top section  */
 .top__section{
     display: flex;
     flex-wrap: wrap;
@@ -113,15 +110,88 @@ body{
     font-size: 16px; 
 }
 
+
+input[type="range"]{
+    --webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 380px;
+
+}
+
+/***** Track Styles *****/
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]::-webkit-slider-runnable-track {
+    background: #053a5f;
+    height: 0.5rem;
+}
+
+/******** Firefox ********/
+input[type="range"]::-moz-range-track {
+    background: #053a5f;
+    height: 0.5rem;
+}
+
+/***** Thumb Styles *****/
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /* Override default look */
+    appearance: none;
+    margin-top: -12px;
+    /* Centers thumb on the track */
+    background-color: #5cd5eb;
+    height: 2rem;
+    width: 1rem;
+}
+
+/***** Firefox *****/
+input[type="range"]::-moz-range-thumb {
+    border: none;
+    /*Removes extra border that FF applies*/
+    border-radius: 0;
+    /*Removes default border-radius that FF applies*/
+    background-color: #5cd5eb;
+    height: 2rem;
+    width: 1rem;
+}
+
+/* middle section  */
 .middle__section{
     margin: 20px 0 40px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 10px;
-    font-size: 14px;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
     color: var(--grayish_blue);
     font-weight: 600;
+}
+
+.toggle__button{
+    width: 40px;
+    height: 20px;
+    padding: 3px;
+    background-color: var(--light_grayish_blue);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.ball{
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--white);
+    transition: transform 0.3s;
+}
+
+.ball.toggle {
+    transform: translateX(20px);
+}
+.toggle__button.toggleBg{
+    background-color: var(--soft_cyan);
 }
 
 .discount__badge{
@@ -144,6 +214,7 @@ hr{
     width: 100%;
 }
 
+/* bottom section  */
 ul{
     list-style: none;
 }
@@ -151,7 +222,6 @@ ul{
 .benefits__list ul{
     line-height: 25px;
 }
-
 
 li .check__icon{
     margin-right: 10px;
