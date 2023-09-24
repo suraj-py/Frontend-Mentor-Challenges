@@ -18,7 +18,7 @@
     /* Neutral  */
     --white : hsl(0, 0%, 100%); /*(Pricing Component Background)*/ 
     --very_pale_blue : hsl(230, 100%, 99%); /*(Main Background)*/ 
-    --light_grayish_blue : hsl(224, 65%, 95%); /*(Empty Slider Bar)*/ 
+    --light_grayish : hsl(224, 65%, 95%); /*(Empty Slider Bar)*/ 
     --light_grayish_blue : hsl(223, 50%, 87%); /*(Toggle Background)*/ 
     --grayish_blue : hsl(225, 20%, 60%); /*(Text)*/ 
     --dark_desaturated_blue : hsl(227, 35%, 25%); /*(Text & CTA Background)*/
@@ -116,21 +116,26 @@ input[type="range"]{
     appearance: none;
     background: transparent;
     cursor: pointer;
-    width: 380px;
+    width: 420px;    
 
 }
 
 /***** Track Styles *****/
 /***** Chrome, Safari, Opera, and Edge Chromium *****/
 input[type="range"]::-webkit-slider-runnable-track {
-    background: #053a5f;
-    height: 0.5rem;
+    background: var(--light_grayish);
+    height: 0.4rem;
+    border-radius: 50px;
+    background-image: linear-gradient(#ff4500, #ff4500);
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
 }
 
 /******** Firefox ********/
 input[type="range"]::-moz-range-track {
-    background: #053a5f;
-    height: 0.5rem;
+    background: var(--light_grayish);
+    height: 0.4rem;
+    border-radius: 50px;
 }
 
 /***** Thumb Styles *****/
@@ -141,20 +146,44 @@ input[type="range"]::-webkit-slider-thumb {
     appearance: none;
     margin-top: -12px;
     /* Centers thumb on the track */
-    background-color: #5cd5eb;
+    background-color: var(--strong_cyan);
     height: 2rem;
-    width: 1rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-image: url('./images/icon-slider.svg');
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 /***** Firefox *****/
 input[type="range"]::-moz-range-thumb {
     border: none;
     /*Removes extra border that FF applies*/
-    border-radius: 0;
+    border-radius: 50%;
     /*Removes default border-radius that FF applies*/
-    background-color: #5cd5eb;
+    background-color: var(--strong_cyan);
     height: 2rem;
-    width: 1rem;
+    width: 2rem;
+    background-image: url('./images/icon-slider.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/***** Focus Styles *****/
+/* Removes default focus */
+input[type="range"]:focus {
+    outline: none;
+}
+
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]:focus::-webkit-slider-thumb {
+    box-shadow: 0px 10px 30px var(--strong_cyan);
+}
+
+/******** Firefox ********/
+input[type="range"]:focus::-moz-range-thumb {
+    box-shadow: 0px 10px 30px var(--strong_cyan);
 }
 
 /* middle section  */
