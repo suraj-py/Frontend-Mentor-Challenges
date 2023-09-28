@@ -1,8 +1,7 @@
 const toggleButton = document.querySelector('.toggle__button')
 const toggleBall = document.querySelector('.ball')
 
-const rangeInputs = document.querySelectorAll('input[type="range"]')
-
+const rangeInput = document.querySelector('input[type="range"]')
 
 function handleInputChange(e) {
   let target = e.target
@@ -16,8 +15,16 @@ function handleInputChange(e) {
   target.style.backgroundSize = (val - min) * 100 / (max - min) + '% 100%'
 }
 
-rangeInputs.forEach(input => {
-  input.addEventListener('input', handleInputChange)
+rangeInput.addEventListener('input', handleInputChange)
+
+rangeInput.addEventListener('mousedown', (e)=>{
+  e.target.classList.add('grabbing')
+  e.target.classList.remove('pointer')
+})
+
+rangeInput.addEventListener('mouseup', (e)=>{
+  e.target.classList.remove('grabbing')
+  e.target.classList.add('pointer')
 })
 
 toggleButton.addEventListener('click', () => {
