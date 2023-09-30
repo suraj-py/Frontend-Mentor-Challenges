@@ -36,7 +36,7 @@ This is a solution to the [Interactive pricing component challenge on Frontend M
 
 ### What I learned
 
-- How to style a range input. Never knew style a range input will be that difficult. I have mentioned the blogs that help me a lot while buliding this project.
+- How to style a range input. Never knew styling a range input will be that difficult. I have mentioned the blogs that help me alot while buliding this project.
 
 ### Useful resources
 
