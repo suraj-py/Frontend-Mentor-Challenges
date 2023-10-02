@@ -87,6 +87,12 @@ main{
 
 .bargraph_section{
     height: 200px;
+    border: 1px solid red;
+}
+
+.myChart{
+    width: 100%;
+    margin-top: 20px;
 }
 
 .total_spending flex{

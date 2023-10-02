@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expenses Chart Component</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="app.js"></script>
+    <script type="module" src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.min.js"></script>
 </head>
 <body>
     <main class="" >
@@ -26,13 +27,7 @@
         </h2>
 
         <div class="bargraph_section">
-            <span class="bar">mon</span>
-            <span class="bar">tue</span>
-            <span class="bar">wed</span>
-            <span class="bar">thu</span>
-            <span class="bar">fri</span>
-            <span class="bar">sat</span>
-            <span class="bar">sun</span>
+            <canvas id="myChart"></canvas>
         </div>
 
         <hr>
