@@ -3,7 +3,7 @@ This repository contains challenges that I solved from [Frontend Mentor](https:/
 
 | No. | Projects | Live Demo |
 | --- | --- | --- |
-| 01 |[Loopstudios Landing Page](https://github.com/suraj-py/Frontend-Mentor-Challenges/tree/master/loopstudios-landing-page-main)|[Preview](https://loopstudios-page-fm.netlify.app/)|
-| 02 |[Social Media Dashboard](https://github.com/suraj-py/Frontend-Mentor-Challenges/tree/master/social-media-dashboard-with-theme-switcher-master)|[Preview](https://social-media-dashboard-fm.netlify.app/)|
-| 03 |[Advice Generator App](https://github.com/suraj-py/Frontend-Mentor-Challenges/tree/master/advice-generator-app-main)|[Preview](https://advice-generator-main-fm.netlify.app/)|
-| 04 |[Interactive Pricing Component](https://github.com/suraj-py/Frontend-Mentor-Challenges/tree/master/interactive-pricing-component-main) | [Preview](https://interactive-pricing-comp-fm.netlify.app/)|
+| 01 |[Loopstudios Landing Page](https://github.com/suraj-py/Frontend-Mentor-Challenges/tree/master/Loopstudios%20Landing%20Page)|[Preview](https://loopstudios-page-fm.netlify.app/)|
+| 02 |[Social Media Dashboard](https://github.com/suraj-py/Frontend-Mentor-Challenges/tree/master/Social%20Media%20Dashboard)|[Preview](https://social-media-dashboard-fm.netlify.app/)|
+| 03 |[Advice Generator App](https://github.com/suraj-py/Frontend-Mentor-Challenges/tree/master/Advice%20Generator%20App)|[Preview](https://advice-generator-main-fm.netlify.app/)|
+| 04 |[Interactive Pricing Component](https://github.com/suraj-py/Frontend-Mentor-Challenges/tree/master/Interactive%20Pricing%20Component) | [Preview](https://interactive-pricing-comp-fm.netlify.app/)|
