@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
 
-
-
 *{
     padding: 0;
     margin: 0;
@@ -12,6 +10,7 @@ html{
     scroll-behavior: smooth;
     font-family: 'Inter', sans-serif;
 }
+
 
 :root{
     
@@ -25,3 +24,4 @@ html{
     --dark_grayish_blue: hsl(236, 13%, 42%); 
     --very_dark_blue: hsl(240, 100%, 5%);
 }
+
