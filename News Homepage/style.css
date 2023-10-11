@@ -28,7 +28,6 @@ html{
 .container{
     width: 90%;
     margin: 0 auto;
-    border: 1px solid red;
 }
 
 a{
@@ -70,13 +69,148 @@ ul, li{
 .main__section{
     margin-top: 20px;
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 30px;
 }
 
 .hero__image{
-    max-width: 700px;
-    object-fit: contain;
+    grid-column: 1/3;
+}
+
+.new__info{
+    grid-column: 3/4;
+    grid-row: 1/3
 }
 
 .hero__image img{
     max-width: 100%;
 }
+
+.new__info{
+    background-color: var(--very_dark_blue);
+    padding: 20px;
+}
+
+.new__heading{
+    color: var(--soft_orange);
+    font-size: 2.2rem;
+    margin: 10px 0;
+}
+
+.sub__info{
+    line-height: 30px;
+    padding: 20px 0;
+}
+.sub__info h3{
+    color: var(--off_white);
+    font-size: 1.2rem;
+}
+
+.sub__info p{
+    color: var(--grayish_blue);
+    font-size: 1rem;
+}
+
+hr{
+    height: 0.5px;
+    background-color: var(--grayish_blue);
+}
+
+
+.page__title h1{
+    font-size: 3rem;
+    color: var(--very_dark_blue);
+}
+
+
+.about__company p{
+    font-size: 1rem;
+    color: var(--dark_grayish_blue);
+    line-height: 1.3;
+}
+
+.about__company button{
+    all: unset;
+    width: 150px;
+    padding: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: var(--soft_red);
+    color: var(--off_white);
+    letter-spacing: 2px;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.about__company button:hover{
+    background-color: var(--very_dark_blue);
+}
+
+/* Blogs cards section */
+.blogs__section {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+
+.blog__card{
+    width: 350px;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.blog__thumbnail img{
+    width: 120px;
+    height: 150px;
+}
+
+.blog__overview p{
+    margin: 10px 0;
+}
+
+.blog__overview .blog-number{
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: var(--grayish_blue);
+}
+
+.blog__overview .blog-title{
+    font-weight: bold;
+    color: var(--very_dark_blue);
+}
+
+.blog__overview .blog-title:hover{
+    color: var(--soft_red);
+}
+
+.blog__overview .blog-info{
+    font-size: .9rem;
+    color: var(--dark_grayish_blue);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
