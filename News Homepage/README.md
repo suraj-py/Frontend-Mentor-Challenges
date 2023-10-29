@@ -20,10 +20,10 @@ This is a solution to the [News homepage](https://www.frontendmentor.io/challeng
 ### Screenshot
 
 - Desktop view
-![Desktop view](./screenshots/desktop-view.png)
+![Desktop view](screenshots/desktop-view.png)
 
 - Mobile view
-![Mobile view](./screenshots/mobile-view.png)
+![Mobile view](screenshots/mobile-view.png)
 
 ## My process
 
