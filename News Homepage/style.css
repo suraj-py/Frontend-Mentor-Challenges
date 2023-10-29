@@ -89,11 +89,12 @@ ul, li{
     display: flex;
     flex-direction: column;
     gap:50px;
-    transform: translateX(500px);
+    display: none;
+    
 }
 
 .open{
-    transform: translateX(0px);
+    display: block;
 }
 
 .mobile__nav-menu .hamburger__close{
@@ -285,6 +286,7 @@ hr{
     .mobile-image {
         display: block;
     }
+
 }
 
 
