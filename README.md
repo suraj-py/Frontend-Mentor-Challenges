@@ -7,3 +7,4 @@ This repository contains challenges that I solved from [Frontend Mentor](https:/
 | 02 |[Social Media Dashboard](https://github.com/suraj-py/Frontend-Mentor-Challenges/tree/master/Social%20Media%20Dashboard)|[Preview](https://social-media-dashboard-fm.netlify.app/)|
 | 03 |[Advice Generator App](https://github.com/suraj-py/Frontend-Mentor-Challenges/tree/master/Advice%20Generator%20App)|[Preview](https://advice-generator-main-fm.netlify.app/)|
 | 04 |[Interactive Pricing Component](https://github.com/suraj-py/Frontend-Mentor-Challenges/tree/master/Interactive%20Pricing%20Component) | [Preview](https://interactive-pricing-comp-fm.netlify.app/)|
+| 05 |[News Hompage](https://github.com/suraj-py/Frontend-Mentor-Challenges/tree/master/News%20Homepage)|[Preview](https://new-homepage-fm.netlify.app/)|
