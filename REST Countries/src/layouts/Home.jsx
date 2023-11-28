@@ -42,6 +42,7 @@ function Home() {
 
   const [countryData, setCountryData] = useState([])
   const [searchCountry, setSearchCountry] = useState('')
+  const [searchRegion, setSearchRegion] = useState('')
 
   let url = 'https://restcountries.com/v3.1/all?fields=name,flags,region,population,capital'
   const fetchData = async () => {
@@ -54,7 +55,10 @@ function Home() {
   }, [])
 
   const filteredCountries = countryData.filter(country => {
-    return country.name.common.toLowerCase().includes(searchCountry.toLowerCase())
+    return (
+      country.name.common.toLowerCase().includes(searchCountry.toLowerCase()) && 
+      country.region.toLowerCase().includes(searchRegion.toLowerCase())
+    )
   })
   
 
@@ -68,13 +72,16 @@ function Home() {
             value={searchCountry}
             handlerFunction={(e) => setSearchCountry(e.target.value)}
           />
-          <FilterRegion />
+          <FilterRegion
+            value={searchRegion}
+            handlerFunction={(e) => setSearchRegion(e.target.value)}
+          />
         </FindSection>
         <CountryCards>
           {
             filteredCountries.map(country => (
               <CountryCard
-                key={country.capital}
+                key={country.flags.png}
                 imgUrl={country.flags.png}
                 name={country.name.common}
                 population={country.population}

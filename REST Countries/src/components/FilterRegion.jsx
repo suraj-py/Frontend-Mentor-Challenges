@@ -1,9 +1,9 @@
 import React from 'react'
 
-function FilterRegion() {
+function FilterRegion({handlerFunction}) {
   return (
     <div>
-       <select>
+       <select onChange={handlerFunction}>
           <option value="">Filter by Region</option>
           <option value="Africa">Africa</option>
           <option value="Americas">Americas</option>
