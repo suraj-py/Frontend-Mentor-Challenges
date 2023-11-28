@@ -28,12 +28,12 @@ const SearchInput = styled.input`
 
 `;
 
-function Searchbar({name}) {
+function Searchbar({handlerFunction}) {
   return (
     <Form>
           <Search size={16} color='white' />
           <SearchInput
-              value={name}
+              onChange={handlerFunction}
               type='text'
               placeholder='Search for a country...'
           />
