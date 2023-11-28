@@ -9,12 +9,24 @@ const Main = styled.main`
   height: 100vh;
   padding: 20px 100px;
   background-color: hsl(207, 26%, 17%);
+
+  @media screen and (max-width: 620px) {
+    overflow-x: hidden;
+    padding-left: 10px;
+  }
 `;
 
 const FindSection = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: 620px) {
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 10px;
+  }
 `;
 
 

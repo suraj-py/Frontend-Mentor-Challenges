@@ -22,6 +22,10 @@ const SearchInput = styled.input`
   font-size: 1rem; 
   background-color: hsl(209, 23%, 22%);
 
+  @media screen and (max-width: 620px) {
+    width: 300px;
+  }
+
 `;
 
 function Searchbar({name}) {
