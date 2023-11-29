@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import Navbar from '../components/Navbar'
 import Searchbar from '../components/Searchbar'
 import styled from 'styled-components'
 import FilterRegion from '../components/FilterRegion';
@@ -65,7 +64,6 @@ function Home() {
 
   return (
     <div>
-      <Navbar />
       <Main>
         <FindSection>
           <Searchbar

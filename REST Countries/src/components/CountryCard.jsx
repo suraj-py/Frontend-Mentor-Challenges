@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 
 const Card = styled.article`
@@ -35,7 +36,8 @@ const Info = styled.span`
 `
 
 function CountryCard({imgUrl, name, population, region, capital}) {
-  return (
+    return (
+    <Link to={`/detail/${name}`}>
     <Card>
         <FlagImg src={imgUrl} />
         <CountryInfo>
@@ -45,6 +47,7 @@ function CountryCard({imgUrl, name, population, region, capital}) {
             <InfoTitle>Capital: <Info>{ capital }</Info></InfoTitle>
         </CountryInfo>
     </Card>
+    </Link>
   )
 }
 
