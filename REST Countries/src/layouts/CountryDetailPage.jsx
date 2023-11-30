@@ -6,7 +6,7 @@ import styled from 'styled-components'
 const Wrapper = styled.div`
   width: 100%;
   height: 100vh;
-  padding: 20px 100px;
+  padding: 50px 100px;
   background-color: hsl(207, 26%, 17%);
 
   @media screen and (max-width: 620px) {
@@ -14,7 +14,7 @@ const Wrapper = styled.div`
     padding-left: 10px;
   }
 `
-const BackButton = styled.button`
+const Button = styled.button`
   all: unset;
   width: 80px;
   height: 20px;
@@ -28,38 +28,60 @@ const BackButton = styled.button`
   background-color: hsl(209, 23%, 22%);
 `
 const DetailSection = styled.div`
+  margin-top: 30px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 `
 const FlagImage = styled.img`
-  width: 200px;
-  height: 150px;
+  width: 400px;
+  height: 260px;
 `
 const CountryInfo = styled.div`
-  
+  color: white;
+  margin-right: 150px;
+
 `
 const CountryName = styled.h1`
-  
+  text-align: left;
+  font-weight: 800;
+  margin-bottom: 1rem;
 `
 
 const InfoSection = styled.div`
-  
+  display: flex;
+  gap: 4rem;
+  line-height: 1.8;
+  margin-bottom: 1.3rem;
 `
 const InfoTitle = styled.p`
-
+  font-weight: 600;
 `
 
 const Info = styled.span`
-
+  font-weight: 300;
 `
-
+const BorderSection = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: wrap;
+`
 
 
 function CountryDetailPage() {
   const [countryInfo, setCountryInfo] = useState([])
+  const [borders, setBorders] = useState([])
+
   const { name } = useParams()
   const url = `https://restcountries.com/v3.1/name/${name}?fullText=true`
+  const url2 = 'https://restcountries.com/v3.1/all?fields=name,cca3'
 
+  const fetchInfo = async () => {
+    let response = await fetch(url2)
+    let data = await response.json()
+    setBorders(data)
+  }
   const fetchCountryDatabyName = async ()=> {
     let response = await fetch(url)
     let data = await response.json()
@@ -68,16 +90,17 @@ function CountryDetailPage() {
 
   useEffect(() => {
     fetchCountryDatabyName()
+    fetchInfo()
   }, [])
 
 
   return (
     <Wrapper>
       <Link to='/'>
-        <BackButton>
+        <Button>
           <ArrowLeft color='white' />  
           Back
-        </BackButton>
+        </Button>
       </Link>
       {
         countryInfo.map(country => (
@@ -87,12 +110,30 @@ function CountryDetailPage() {
               <CountryName>{country.name.common}</CountryName>
               <InfoSection>
                 <div>
-                  <InfoTitle>Population: <Info>{ country.population}</Info></InfoTitle>
+                  <InfoTitle>Native Name: <Info>{Object.keys(country.name.nativeName)[0]}</Info></InfoTitle>
+                  <InfoTitle>Population: <Info>{country.population}</Info></InfoTitle>
+                  <InfoTitle>Region: <Info>{country.region}</Info></InfoTitle>
+                  <InfoTitle>Sub Region: <Info>{country.subregion}</Info></InfoTitle>
+                  <InfoTitle>Capital: <Info>{ country.capital}</Info></InfoTitle>
                 </div>
                 <div>
-                  <InfoTitle>Population: <Info>{ country.languages.en}</Info></InfoTitle>
+                  <InfoTitle>Top Level Domain: <Info>{country.tld}</Info></InfoTitle>
+                  <InfoTitle>Currencies: <Info>{Object.keys(country.currencies)}</Info></InfoTitle>
+                  <InfoTitle>Languages: <Info>{ Object.values(country.languages).join(', ')}</Info></InfoTitle>
                 </div>
               </InfoSection>
+              
+              <InfoTitle>
+                Border Countries: {
+                  country.borders === undefined ? 
+                    (<Info>No Border Countries</Info>)
+                    : (
+                  <Button>
+                    {country.borders[0]}
+                      </Button>
+                      )
+                }
+              </InfoTitle>
             </CountryInfo>
         </DetailSection>
         ))
