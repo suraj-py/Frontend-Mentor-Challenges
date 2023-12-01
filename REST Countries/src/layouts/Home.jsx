@@ -4,6 +4,9 @@ import styled from 'styled-components'
 import FilterRegion from '../components/FilterRegion';
 import CountryCard from '../components/CountryCard';
 
+
+let scrollHeight = document.body.scrollHeight
+console.log(scrollHeight)
 const Main = styled.main`
   width: 100%;
   height: auto;
@@ -23,9 +26,9 @@ const FindSection = styled.div`
 
   @media screen and (max-width: 620px) {
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
     align-items: start;
-    gap: 10px;
+    gap: 2rem;
   }
 `;
 

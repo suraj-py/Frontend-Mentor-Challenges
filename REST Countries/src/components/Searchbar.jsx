@@ -17,6 +17,7 @@ const SearchInput = styled.input`
   height: 40px;
   outline: none;
   border: none;
+  border-radius: 5px;
   color: white;
   padding-left: 10px;
   font-size: 1rem; 
@@ -24,6 +25,7 @@ const SearchInput = styled.input`
 
   @media screen and (max-width: 620px) {
     width: 300px;
+    justify-self: center;
   }
 
 `;
