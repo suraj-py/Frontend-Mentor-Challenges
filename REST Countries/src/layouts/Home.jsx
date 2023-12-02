@@ -4,9 +4,6 @@ import styled from 'styled-components'
 import FilterRegion from '../components/FilterRegion';
 import CountryCard from '../components/CountryCard';
 
-
-let scrollHeight = document.body.scrollHeight
-console.log(scrollHeight)
 const Main = styled.main`
   width: 100%;
   height: auto;
@@ -15,7 +12,6 @@ const Main = styled.main`
 
   @media screen and (max-width: 620px) {
     overflow-x: hidden;
-    padding-left: 10px;
   }
 `;
 
@@ -24,18 +20,21 @@ const FindSection = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  @media screen and (max-width: 620px) {
+  @media screen and (max-width: 760px) {
     flex-direction: column;
-    justify-content: center;
-    align-items: start;
+    justify-content: start;
     gap: 2rem;
+    padding-left: 10px;
   }
 `;
+
+
 
 const CountryCards = styled.div`
   margin-top: 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, 240px);
+  justify-content: center;
   gap: 2.5rem;
 `
 
