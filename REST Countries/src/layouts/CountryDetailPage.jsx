@@ -1,6 +1,7 @@
 import { ArrowLeft } from 'lucide-react'
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
+import { data } from '../data/countryNames'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
@@ -18,7 +19,7 @@ const Button = styled.button`
   all: unset;
   width: 80px;
   height: 20px;
-  padding: 5px;
+  padding: 10px;
   color: white;
   font-weight: 300;
   display: flex;
@@ -71,17 +72,12 @@ const BorderSection = styled.div`
 
 function CountryDetailPage() {
   const [countryInfo, setCountryInfo] = useState([])
-  const [borders, setBorders] = useState([])
+  const border = []
 
   const { name } = useParams()
   const url = `https://restcountries.com/v3.1/name/${name}?fullText=true`
-  const url2 = 'https://restcountries.com/v3.1/all?fields=name,cca3'
 
-  const fetchInfo = async () => {
-    let response = await fetch(url2)
-    let data = await response.json()
-    setBorders(data)
-  }
+
   const fetchCountryDatabyName = async ()=> {
     let response = await fetch(url)
     let data = await response.json()
@@ -90,9 +86,26 @@ function CountryDetailPage() {
 
   useEffect(() => {
     fetchCountryDatabyName()
-    fetchInfo()
   }, [])
 
+  function Borders() {
+    countryInfo.map(i => {
+      if (i.borders === undefined) {
+        return border
+      }
+      else {
+        i.borders.map(j => {
+          data.map(k => {
+            if (k.cca3 === j) {
+              border.push(k.name.common)
+            }
+          })
+        })
+      }
+      
+   })
+  }
+  Borders()
 
   return (
     <Wrapper>
@@ -124,14 +137,18 @@ function CountryDetailPage() {
               </InfoSection>
               
               <InfoTitle>
-                Border Countries: {
-                  country.borders === undefined ? 
-                    (<Info>No Border Countries</Info>)
-                    : (
-                  <Button>
-                    {country.borders[0]}
-                      </Button>
-                      )
+                Border Countries:
+                {border.length === 0 ? (
+                  <Info> No border countries</Info>
+                ):(
+                  <BorderSection>
+                    {
+                      border.map(i => (
+                          <Button>{ i }</Button>
+                      ))
+                    }
+                  </BorderSection>
+                )
                 }
               </InfoTitle>
             </CountryInfo>
