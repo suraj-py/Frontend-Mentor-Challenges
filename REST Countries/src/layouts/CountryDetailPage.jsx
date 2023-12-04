@@ -123,7 +123,7 @@ function CountryDetailPage() {
               <CountryName>{country.name.common}</CountryName>
               <InfoSection>
                 <div>
-                  <InfoTitle>Native Name: <Info>{Object.keys(country.name.nativeName)[0]}</Info></InfoTitle>
+                  <InfoTitle>Native Name: <Info>{(Object.values(country.name.nativeName)[0]).official}</Info></InfoTitle>
                   <InfoTitle>Population: <Info>{country.population}</Info></InfoTitle>
                   <InfoTitle>Region: <Info>{country.region}</Info></InfoTitle>
                   <InfoTitle>Sub Region: <Info>{country.subregion}</Info></InfoTitle>
