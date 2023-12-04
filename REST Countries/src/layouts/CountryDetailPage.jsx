@@ -10,9 +10,9 @@ const Wrapper = styled.div`
   padding: 50px 100px;
   background-color: hsl(207, 26%, 17%);
 
-  @media screen and (max-width: 620px) {
+  @media screen and (max-width: 720px) {
     overflow-x: hidden;
-    padding-left: 10px;
+    padding-left: 20px;
   }
 `
 const Button = styled.button`
@@ -31,22 +31,37 @@ const Button = styled.button`
 const DetailSection = styled.div`
   margin-top: 30px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+
+  @media screen and (max-width: 720px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `
 const FlagImage = styled.img`
   width: 400px;
   height: 260px;
+
+  @media screen and (max-width: 720px) {
+    width: 300px;
+    height: 180px;
+  }
+
 `
 const CountryInfo = styled.div`
   color: white;
-  margin-right: 150px;
 
 `
 const CountryName = styled.h1`
   text-align: left;
   font-weight: 800;
   margin-bottom: 1rem;
+
+  @media screen and (max-width: 720px) {
+    margin-top: 1rem;
+  }
 `
 
 const InfoSection = styled.div`
@@ -54,6 +69,12 @@ const InfoSection = styled.div`
   gap: 4rem;
   line-height: 1.8;
   margin-bottom: 1.3rem;
+
+  @media screen and (max-width: 720px) {
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 0.8rem;
+  }
 `
 const InfoTitle = styled.p`
   font-weight: 600;
@@ -61,6 +82,12 @@ const InfoTitle = styled.p`
 
 const Info = styled.span`
   font-weight: 300;
+`
+
+const BorderTitle = styled(InfoTitle)`
+   @media screen and (max-width: 720px) {
+    margin-top: 2rem;
+  }
 `
 const BorderSection = styled.div`
   display: flex;
@@ -136,7 +163,7 @@ function CountryDetailPage() {
                 </div>
               </InfoSection>
               
-              <InfoTitle>
+              <BorderTitle>
                 Border Countries:
                 {border.length === 0 ? (
                   <Info> No border countries</Info>
@@ -150,7 +177,7 @@ function CountryDetailPage() {
                   </BorderSection>
                 )
                 }
-              </InfoTitle>
+              </BorderTitle>
             </CountryInfo>
         </DetailSection>
         ))
