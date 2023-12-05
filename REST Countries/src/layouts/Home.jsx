@@ -6,7 +6,7 @@ import CountryCard from '../components/CountryCard';
 
 const Main = styled.main`
   width: 100%;
-  height: auto;
+  /* height: auto; */
   padding: 20px 100px;
   background-color: hsl(207, 26%, 17%);
 
@@ -28,14 +28,30 @@ const FindSection = styled.div`
   }
 `;
 
-
-
 const CountryCards = styled.div`
+  height: 100%;
   margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, 240px);
   justify-content: center;
   gap: 2.5rem;
+`
+
+const BottomSection = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+`
+const Button = styled.button`
+  all: unset;
+  width: 80px;
+  height: 20px;
+  padding: 10px;
+  color: white;
+  font-weight: 300;
+  cursor: pointer;
+  background-color: hsl(209, 23%, 22%);
 `
 
 
@@ -44,6 +60,7 @@ function Home() {
   const [countryData, setCountryData] = useState([])
   const [searchCountry, setSearchCountry] = useState('')
   const [searchRegion, setSearchRegion] = useState('')
+  const [loadMore, setLoadMore] = useState(10)
 
   let url = 'https://restcountries.com/v3.1/all?fields=name,flags,region,population,capital'
   const fetchData = async () => {
@@ -53,7 +70,7 @@ function Home() {
   }
   useEffect(() => {
     fetchData()
-  }, [])
+  }, [countryData])
 
   const filteredCountries = countryData.filter(country => {
     return (
@@ -65,7 +82,6 @@ function Home() {
 
 
   return (
-    <div>
       <Main>
         <FindSection>
           <Searchbar
@@ -79,7 +95,7 @@ function Home() {
         </FindSection>
         <CountryCards>
           {
-            filteredCountries.map(country => (
+            filteredCountries.slice(0, loadMore).map(country => (
               <CountryCard
                 key={country.flags.png}
                 imgUrl={country.flags.png}
@@ -90,9 +106,16 @@ function Home() {
               />
             ))
           }
-        </CountryCards>
+      </CountryCards>
+      <BottomSection>
+      {filteredCountries.length > 9 ?
+        (
+          <Button onClick={() => setLoadMore(prev => prev + 10)}> Load More </Button>
+        ) :
+        (<></>)
+      }
+      </BottomSection>
       </Main>
-    </div>
   )
 }
 
