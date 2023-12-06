@@ -6,7 +6,7 @@ import CountryCard from '../components/CountryCard';
 
 const Main = styled.main`
   width: 100%;
-  /* height: auto; */
+  min-height: 100vh;
   padding: 20px 100px;
   background-color: hsl(207, 26%, 17%);
 
