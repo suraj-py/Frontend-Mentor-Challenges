@@ -2,6 +2,7 @@ import { ArrowLeft } from 'lucide-react'
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { data } from '../data/countryNames'
+import { numberFormatter } from '../utilis/populationFormatter'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
@@ -31,7 +32,8 @@ const Button = styled.button`
 const DetailSection = styled.div`
   margin-top: 30px;
   display: flex;
-  justify-content: space-around;
+  gap: 2rem;
+  justify-content: space-between;
   align-items: center;
 
   @media screen and (max-width: 720px) {
@@ -97,6 +99,7 @@ const BorderSection = styled.div`
 `
 
 
+
 function CountryDetailPage() {
   const [countryInfo, setCountryInfo] = useState([])
   const border = []
@@ -151,7 +154,7 @@ function CountryDetailPage() {
               <InfoSection>
                 <div>
                   <InfoTitle>Native Name: <Info>{(Object.values(country.name.nativeName)[0]).official}</Info></InfoTitle>
-                  <InfoTitle>Population: <Info>{country.population}</Info></InfoTitle>
+                  <InfoTitle>Population: <Info>{numberFormatter(country.population)}</Info></InfoTitle>
                   <InfoTitle>Region: <Info>{country.region}</Info></InfoTitle>
                   <InfoTitle>Sub Region: <Info>{country.subregion}</Info></InfoTitle>
                   <InfoTitle>Capital: <Info>{ country.capital}</Info></InfoTitle>

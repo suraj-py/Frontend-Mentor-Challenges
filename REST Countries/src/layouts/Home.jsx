@@ -3,6 +3,7 @@ import Searchbar from '../components/Searchbar'
 import styled from 'styled-components'
 import FilterRegion from '../components/FilterRegion';
 import CountryCard from '../components/CountryCard';
+import { numberFormatter } from '../utilis/populationFormatter';
 
 const Main = styled.main`
   width: 100%;
@@ -100,7 +101,7 @@ function Home() {
                 key={country.flags.png}
                 imgUrl={country.flags.png}
                 name={country.name.common}
-                population={country.population}
+                population={numberFormatter(country.population)}
                 region={country.region}
                 capital={country.capital}
               />
