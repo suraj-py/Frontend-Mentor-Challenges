@@ -2,6 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
+export const linkStyle = {
+  textDecoration: "none",
+};
 
 const Card = styled.article`
     width: 240px;
@@ -37,7 +40,7 @@ const Info = styled.span`
 
 function CountryCard({imgUrl, name, population, region, capital}) {
     return (
-    <Link to={`/detail/${name}`}>
+    <Link to={`/detail/${name}`} style={linkStyle}>
     <Card>
         <FlagImg src={imgUrl} />
         <CountryInfo>

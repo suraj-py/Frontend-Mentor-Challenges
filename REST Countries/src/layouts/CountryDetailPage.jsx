@@ -4,7 +4,7 @@ import { Link, useParams } from 'react-router-dom'
 import { data } from '../data/countryNames'
 import { numberFormatter } from '../utilis/populationFormatter'
 import styled from 'styled-components'
-
+import { linkStyle } from '../components/CountryCard'
 const Wrapper = styled.div`
   width: 100%;
   height: 100vh;
@@ -19,7 +19,7 @@ const Wrapper = styled.div`
 const Button = styled.button`
   all: unset;
   width: 80px;
-  height: 20px;
+  min-height: 20px;
   padding: 10px;
   color: white;
   font-weight: 300;
@@ -139,7 +139,7 @@ function CountryDetailPage() {
 
   return (
     <Wrapper>
-      <Link to='/'>
+      <Link to='/' style={linkStyle}>
         <Button>
           <ArrowLeft color='white' />  
           Back

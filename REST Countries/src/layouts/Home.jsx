@@ -55,7 +55,6 @@ const Button = styled.button`
   background-color: hsl(209, 23%, 22%);
 `
 
-
 function Home() {
 
   const [countryData, setCountryData] = useState([])
@@ -80,8 +79,6 @@ function Home() {
     )
   })
   
-
-
   return (
       <Main>
         <FindSection>
