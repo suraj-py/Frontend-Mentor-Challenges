@@ -54,7 +54,14 @@ const Button = styled.button`
   cursor: pointer;
   background-color: hsl(209, 23%, 22%);
 `
-
+let countries = [
+    "Africa",
+    "Americas",
+    "Asia",
+    "Europe",
+    "Oceania",
+];
+  
 function Home() {
 
   const [countryData, setCountryData] = useState([])
@@ -86,10 +93,15 @@ function Home() {
             value={searchCountry}
             handlerFunction={(e) => setSearchCountry(e.target.value)}
           />
-          <FilterRegion
+          {/* <FilterRegion
             value={searchRegion}
             handlerFunction={(e) => setSearchRegion(e.target.value)}
-          />
+          /> */}
+          <FilterRegion
+          label="Choose country"
+          values={countries}
+          onChange={(v) => setSearchRegion(v)}
+        />
         </FindSection>
         <CountryCards>
           {
