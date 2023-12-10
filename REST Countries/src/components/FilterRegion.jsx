@@ -1,24 +1,7 @@
+import { ChevronDown } from 'lucide-react';
 import React, { useState } from 'react'
 import styled, {css} from 'styled-components'
 
-const FilterDiv = styled.select`
-  width: 200px;
-  height: 40px;
-  border: none;
-  outline: none;
-  padding: 10px;
-  font-size: 1rem;
-  font-weight: 300;
-  color: white;
-  border-radius: 5px;
-  background-color: hsl(209, 23%, 22%);
-
-
-
-`
-const FilterOption = styled.option`
-  background-color: hsl(209, 23%, 22%);
-`
 
 const SelectContainer = styled.div`
   position: relative;
@@ -34,8 +17,10 @@ const SelectLabelButton = styled.button`
   border: none;
   border-radius: 5px;
   color: white;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
+  gap: 10px;
   cursor: pointer;
   transition: 0.3s ease;
 `
@@ -63,8 +48,6 @@ const DropdownStyle = styled.div`
 
 
 const DropdownItem = styled.div`
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   display: flex;
   align-items: center;
   width: 90%;
@@ -92,7 +75,7 @@ function FilterRegion({ label, values, onChange}) {
   const [open, setOpen] = useState(false)
 
   const handleOpen = () => {
-    setOpen(true);
+    setOpen(!open);
   };
   const handleClose = () => {
     setOpen(false);
@@ -112,6 +95,7 @@ function FilterRegion({ label, values, onChange}) {
     <SelectContainer>
       <SelectLabelButton onClick={handleOpen}>
         {currentValue !== "" ? currentValue : label}
+        <ChevronDown />
       </SelectLabelButton>
       <DropdownStyle isVisible={open}>
         {values.map((value, index) => (

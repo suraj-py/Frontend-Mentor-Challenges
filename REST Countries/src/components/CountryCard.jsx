@@ -15,7 +15,8 @@ const Card = styled.article`
 const FlagImg = styled.img`
     width: 100%;
     height: 160px;
-    border-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
 `
 const CountryInfo = styled.div`
     color: white;

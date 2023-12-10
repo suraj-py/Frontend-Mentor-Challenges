@@ -9,6 +9,7 @@ const Form = styled.form`
   align-items: center;
   gap: 5px;
   padding-left: 10px;
+  border-radius: 5px;
   background-color: hsl(209, 23%, 22%);
 `;
 
@@ -17,11 +18,14 @@ const SearchInput = styled.input`
   height: 40px;
   outline: none;
   border: none;
-  border-radius: 5px;
   color: white;
   padding-left: 10px;
   font-size: 1rem; 
   background-color: hsl(209, 23%, 22%);
+
+  ::placeholder{
+    color: white;
+  }
 
   @media screen and (max-width: 620px) {
     width: 300px;

@@ -93,12 +93,8 @@ function Home() {
             value={searchCountry}
             handlerFunction={(e) => setSearchCountry(e.target.value)}
           />
-          {/* <FilterRegion
-            value={searchRegion}
-            handlerFunction={(e) => setSearchRegion(e.target.value)}
-          /> */}
           <FilterRegion
-          label="Choose country"
+          label="Filter Regions"
           values={countries}
           onChange={(v) => setSearchRegion(v)}
         />

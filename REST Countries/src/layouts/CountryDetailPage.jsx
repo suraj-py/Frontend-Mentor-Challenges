@@ -118,6 +118,8 @@ function CountryDetailPage() {
     fetchCountryDatabyName()
   }, [])
 
+  console.log(countryInfo)
+
   function Borders() {
     countryInfo.map(i => {
       if (i.borders === undefined) {
