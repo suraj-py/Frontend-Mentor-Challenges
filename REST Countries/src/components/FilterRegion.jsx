@@ -13,10 +13,10 @@ const SelectLabelButton = styled.button`
   min-width: 10rem;
   font-size: 0.9rem;
   font-weight: 500;
-  background-color: hsl(209, 23%, 22%);
+  background-color: ${(props) => props.theme.element};
   border: none;
   border-radius: 5px;
-  color: white;
+  color: ${(props) => props.theme.text};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,7 +35,7 @@ const DropdownStyle = styled.div`
   display: flex;
   flex-direction: column;
   border-radius: 5px;
-  background: hsl(209, 23%, 22%);
+  background: ${(props) => props.theme.element};
   transition: max-height 0.2s ease;
   overflow: hidden;
   ${(p) =>
@@ -55,17 +55,17 @@ const DropdownItem = styled.div`
   padding: 0.3rem 0.5rem;
   font-size: 0.9rem;
   font-weight: 400;
-  color: white;
+  color: ${(props) => props.theme.text};
   border-radius: 0.3rem;
   cursor: pointer;
   ${(p) =>
     p.active &&
     css`
-      color: #166edc;
+      color: #8947e6;
       font-weight: 500;
     `}
   &:hover, :focus, :focus:hover {
-    background-color: #166edc;
+    background-color: #c38adf;
     color: #fafafa;
     outline: none;
   }

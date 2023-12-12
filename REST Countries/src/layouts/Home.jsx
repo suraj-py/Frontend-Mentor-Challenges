@@ -9,7 +9,8 @@ const Main = styled.main`
   width: 100%;
   min-height: 100vh;
   padding: 20px 100px;
-  background-color: hsl(207, 26%, 17%);
+  background-color: ${(props) => props.theme.background};
+  transition: all 0.2s linear;
 
   @media screen and (max-width: 620px) {
     overflow-x: hidden;
@@ -49,10 +50,10 @@ const Button = styled.button`
   width: 80px;
   height: 20px;
   padding: 10px;
-  color: white;
+  color: ${(props) => props.theme.text};
   font-weight: 300;
   cursor: pointer;
-  background-color: hsl(209, 23%, 22%);
+  background-color: ${(props) => props.theme.element};
 `
 let countries = [
     "Africa",

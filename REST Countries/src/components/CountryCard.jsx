@@ -10,7 +10,7 @@ const Card = styled.article`
     width: 240px;
     height: 340px;
     border-radius: 5px;
-    background-color: hsl(209, 23%, 22%);
+    background-color: ${(props) => props.theme.element};
 `
 const FlagImg = styled.img`
     width: 100%;
@@ -19,7 +19,7 @@ const FlagImg = styled.img`
     border-top-left-radius: 5px;
 `
 const CountryInfo = styled.div`
-    color: white;
+    color: ${(props) => props.theme.text};
     padding: 10px 20px;
     
 `

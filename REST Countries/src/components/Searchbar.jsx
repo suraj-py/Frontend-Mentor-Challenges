@@ -10,7 +10,7 @@ const Form = styled.form`
   gap: 5px;
   padding-left: 10px;
   border-radius: 5px;
-  background-color: hsl(209, 23%, 22%);
+  background-color: ${(props) => props.theme.element};
 `;
 
 const SearchInput = styled.input`
@@ -18,13 +18,13 @@ const SearchInput = styled.input`
   height: 40px;
   outline: none;
   border: none;
-  color: white;
+  color: ${(props) => props.theme.text};
   padding-left: 10px;
   font-size: 1rem; 
-  background-color: hsl(209, 23%, 22%);
+  background-color: ${(props) => props.theme.element};
 
   ::placeholder{
-    color: white;
+    color: ${(props) => props.theme.text};
   }
 
   @media screen and (max-width: 620px) {

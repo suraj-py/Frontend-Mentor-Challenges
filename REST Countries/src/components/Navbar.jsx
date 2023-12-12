@@ -1,11 +1,13 @@
 import styled from "styled-components"
 import { Moon } from "lucide-react";
+import { useState } from "react";
+
 
 const Wrapper = styled.div`
   width: 100%;
   height: 60px;
   padding: 0 100px;
-  background-color: hsl(209, 23%, 22%);
+  background-color: ${(props) => props.theme.element};
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,7 +19,7 @@ const Wrapper = styled.div`
 
 const Title = styled.h1`
   font-size: 1.5rem;
-  color: white;
+  color: ${(props) => props.theme.text};
 
   @media screen and (max-width: 640px) {
     font-size: 1rem;
@@ -27,7 +29,7 @@ const Title = styled.h1`
 const DarkModeButton = styled.button`
   all: unset;
   font-size: 1rem;
-  color: white;
+  color: ${(props) => props.theme.text};
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -38,13 +40,14 @@ const DarkModeButton = styled.button`
     font-size: 0.9rem;
   }
 `
-function Navbar() {
+function Navbar({onClick}) {
+ 
   return (
     <Wrapper>
         <Title>
             Where in the world?
         </Title>
-        <DarkModeButton>
+        <DarkModeButton onClick={onClick}>
               <Moon fill="white" />
               Dark Mode
         </DarkModeButton>

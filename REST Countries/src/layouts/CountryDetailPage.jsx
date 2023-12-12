@@ -1,15 +1,16 @@
 import { ArrowLeft } from 'lucide-react'
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { data } from '../data/countryNames'
+import { data } from '../utilis/countryNames'
 import { numberFormatter } from '../utilis/populationFormatter'
 import styled from 'styled-components'
 import { linkStyle } from '../components/CountryCard'
+
 const Wrapper = styled.div`
   width: 100%;
   height: 100vh;
   padding: 50px 100px;
-  background-color: hsl(207, 26%, 17%);
+  background-color: ${(props) => props.theme.background};
 
   @media screen and (max-width: 720px) {
     overflow-x: hidden;
@@ -21,13 +22,13 @@ const Button = styled.button`
   width: 80px;
   min-height: 20px;
   padding: 10px;
-  color: white;
+  color: ${(props) => props.theme.text};
   font-weight: 300;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2px;
-  background-color: hsl(209, 23%, 22%);
+  background-color: ${(props) => props.theme.element};
 `
 const DetailSection = styled.div`
   margin-top: 30px;
@@ -53,7 +54,7 @@ const FlagImage = styled.img`
 
 `
 const CountryInfo = styled.div`
-  color: white;
+  color: ${(props) => props.theme.text};
 
 `
 const CountryName = styled.h1`
@@ -118,7 +119,6 @@ function CountryDetailPage() {
     fetchCountryDatabyName()
   }, [])
 
-  console.log(countryInfo)
 
   function Borders() {
     countryInfo.map(i => {
