@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import FilterRegion from '../components/FilterRegion';
 import CountryCard from '../components/CountryCard';
 import { numberFormatter } from '../utilis/populationFormatter';
+import { countries } from '../utilis/countryNames';
 
 const Main = styled.main`
   width: 100%;
@@ -55,13 +56,7 @@ const Button = styled.button`
   cursor: pointer;
   background-color: ${(props) => props.theme.element};
 `
-let countries = [
-    "Africa",
-    "Americas",
-    "Asia",
-    "Europe",
-    "Oceania",
-];
+
   
 function Home() {
 

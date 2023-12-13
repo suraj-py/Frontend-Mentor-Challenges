@@ -99,8 +99,6 @@ const BorderSection = styled.div`
   flex-wrap: wrap;
 `
 
-
-
 function CountryDetailPage() {
   const [countryInfo, setCountryInfo] = useState([])
   const border = []

@@ -1,7 +1,5 @@
 import styled from "styled-components"
 import { Moon } from "lucide-react";
-import { useState } from "react";
-
 
 const Wrapper = styled.div`
   width: 100%;

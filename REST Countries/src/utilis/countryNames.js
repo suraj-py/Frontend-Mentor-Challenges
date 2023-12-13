@@ -1,3 +1,11 @@
+export const countries = [
+    "Africa",
+    "Americas",
+    "Asia",
+    "Europe",
+    "Oceania",
+];
+
 export const data = [
   {
     "name": {
