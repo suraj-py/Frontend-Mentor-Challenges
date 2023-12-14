@@ -104,16 +104,13 @@ function CountryDetailPage() {
   const border = []
 
   const { name } = useParams()
-  const url = `https://restcountries.com/v3.1/name/${name}?fullText=true`
-
-
-  const fetchCountryDatabyName = async ()=> {
-    let response = await fetch(url)
-    let data = await response.json()
-    setCountryInfo(data)
-  }
 
   useEffect(() => {
+    const fetchCountryDatabyName = async ()=> {
+      let response = await fetch(`https://restcountries.com/v3.1/name/${name}?fullText=true`)
+      let data = await response.json()
+      setCountryInfo(data)
+    }
     fetchCountryDatabyName()
   }, [])
 

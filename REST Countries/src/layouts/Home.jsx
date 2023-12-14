@@ -65,15 +65,14 @@ function Home() {
   const [searchRegion, setSearchRegion] = useState('')
   const [loadMore, setLoadMore] = useState(10)
 
-  let url = 'https://restcountries.com/v3.1/all?fields=name,flags,region,population,capital'
-  const fetchData = async () => {
-    let response = await fetch(url)
-    let data = await response.json();
-    setCountryData(data)
-  }
   useEffect(() => {
+    const fetchData = async () => {
+      let response = await fetch('https://restcountries.com/v3.1/all?fields=name,flags,region,population,capital')
+      let data = await response.json();
+      setCountryData(data)
+    }
     fetchData()
-  }, [countryData])
+  }, [])
 
   const filteredCountries = countryData.filter(country => {
     return (
