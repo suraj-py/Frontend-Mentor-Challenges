@@ -64,12 +64,15 @@ function Home() {
   const [searchCountry, setSearchCountry] = useState('')
   const [searchRegion, setSearchRegion] = useState('')
   const [loadMore, setLoadMore] = useState(10)
+  const [isLoading, setIsLoading] = useState(false)
 
   useEffect(() => {
     const fetchData = async () => {
+      setIsLoading(true)
       let response = await fetch('https://restcountries.com/v3.1/all?fields=name,flags,region,population,capital')
       let data = await response.json();
       setCountryData(data)
+      setIsLoading(false)
     }
     fetchData()
   }, [])
@@ -81,6 +84,7 @@ function Home() {
     )
   })
   
+
   return (
       <Main>
         <FindSection>
@@ -94,6 +98,8 @@ function Home() {
           onChange={(v) => setSearchRegion(v)}
         />
         </FindSection>
+        
+      {isLoading ? (<div>Loading data...!Wait for a moment</div>) : (
         <CountryCards>
           {
             filteredCountries.slice(0, loadMore).map(country => (
@@ -107,7 +113,9 @@ function Home() {
               />
             ))
           }
-      </CountryCards>
+        </CountryCards>
+      )
+      }
       <BottomSection>
       {filteredCountries.length > 9 ?
         (
