@@ -21,9 +21,94 @@ html{
 body{
     font-family: 'Inter', sans-serif;
     background-color: var(--off_black);
+    display: grid;
+    place-items: center;
+    height: 100vh;
 }
 
 a{
     all: unset;
     cursor: pointer;
+}
+
+/* Main Card  */
+.main-card{
+    max-width: 350px;
+    height: auto;
+    background-color: var(--dark_grey);
+    border-radius: 8px;
+}
+
+/* Upper Section  */
+
+/* Info div  */
+.info-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Avatar image  */
+.avatar-image{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Name  */
+.name{
+    font-style: bold;
+    font-weight: 700;
+    font-size: 25px;
+    color: var(--white);
+    margin-top: 20px;
+}
+
+/* Location  */
+.location{
+    font-style: bold;
+    font-weight: 600;
+    color: var(--green);
+    margin-top: 6px;
+}
+
+
+/* Quote  */
+.quote {
+    font-weight: 400;
+    color: var(--white);
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+
+/* Botton section  */
+
+/* Social links Div  */
+.social__links-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0 20px;
+}
+
+/* Single link Div  */
+.single-link{
+    width: 250px;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: var(--grey);
+    font-style: bold;
+    font-weight: 600;
+    color: var(--white);
+    transition: all;
+}
+
+.single-link:hover{
+    color: var(--dark_grey);
+    background-color: var(--green);
 }
