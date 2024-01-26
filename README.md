@@ -9,3 +9,4 @@ This repository contains challenges that I solved from [Frontend Mentor](https:/
 | 04 |[Interactive Pricing Component](https://github.com/suraj-py/Frontend-Mentor-Challenges/tree/master/Interactive%20Pricing%20Component) | [Preview](https://interactive-pricing-comp-fm.netlify.app/)|
 | 05 |[News Hompage](https://github.com/suraj-py/Frontend-Mentor-Challenges/tree/master/News%20Homepage)|[Preview](https://new-homepage-fm.netlify.app/)|
 | 06 |[REST Countries](https://github.com/suraj-py/Frontend-Mentor-Challenges/tree/master/REST%20Countries)|[Preview](https://restcountriessite.netlify.app/)|
+| 07 |[Social Links Profile](https://github.com/suraj-py/Frontend-Mentor-Challenges/tree/master/Social%20Links%20Profile)|[Preview](https://social-links-fm.netlify.app/)|
